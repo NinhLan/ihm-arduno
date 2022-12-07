@@ -120,6 +120,7 @@ class _SelectBondedDevicePage extends State<SelectBondedDevicePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Select device'),
+        backgroundColor: Colors.deepOrange.shade200.withOpacity(0.7),
         actions: <Widget>[
           _isDiscovering
               ? FittedBox(
@@ -138,7 +139,21 @@ class _SelectBondedDevicePage extends State<SelectBondedDevicePage> {
                 )
         ],
       ),
-      body: ListView(children: list),
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'images/ecrant.gif',//gif pour fond d'écrant
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+
+        child: ListView(
+            children: list,
+
+        ),
+      ),
     );
   }
 }

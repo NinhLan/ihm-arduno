@@ -98,7 +98,7 @@ class _ChatPage extends State<ChatPage> {
             width: 222.0,
             decoration: BoxDecoration(
                 color:
-                    _message.whom == clientID ? Colors.blueAccent : Colors.grey,
+                    _message.whom == clientID ? Colors.deepOrange.shade200 : Colors.grey,
                 borderRadius: BorderRadius.circular(7.0)),
           ),
         ],
@@ -114,8 +114,12 @@ class _ChatPage extends State<ChatPage> {
               ? Text('Connecting chat to ' + widget.server.name + '...')
               : isConnected
                   ? Text('Live chat with ' + widget.server.name)
-                  : Text('Chat log with ' + widget.server.name))),
+                  : Text('Chat log with ' + widget.server.name)),
+        backgroundColor: Colors.deepOrange.shade200.withOpacity(0.7),
+      ),
+
       body: SafeArea(
+
         child: Column(
           children: <Widget>[
             Flexible(

@@ -78,17 +78,43 @@ class _MainPage extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
         title: const Text('Flutter Bluetooth Serial'),
+        backgroundColor: Colors.deepOrange.shade200.withOpacity(0.7),
 
       ),
       body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'images/ecrant.gif',//gif pour fond d'écrant
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
         child: ListView(
+
           children: <Widget>[
             Divider(),
-            ListTile(title: const Text('General')),
+            ListTile(
+              title: const Text('General',
+              style: TextStyle(
+                fontFamily: 'SourceSansPro',
+                fontSize: 20.0,
+                color: Colors.white,
+
+              ),
+            ),
+            ),
             SwitchListTile(
-              title: const Text('Enable Bluetooth'),
+              title: const Text('Enable Bluetooth',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  color: Colors.white,
+
+                ),),
               value: _bluetoothState.isEnabled,
               onChanged: (bool value) {
                 // Do the request and update with the true value then
@@ -106,8 +132,20 @@ class _MainPage extends State<MainPage> {
               },
             ),
             ListTile(
-              title: const Text('Bluetooth status'),
-              subtitle: Text(_bluetoothState.toString()),
+              title: const Text('Bluetooth status',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  color: Colors.white,
+
+                ),),
+              subtitle: Text(_bluetoothState.toString(),
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 15.0,
+                  color: Colors.white,
+
+                ),),
               trailing: RaisedButton(
                 child: const Text('Settings'),
                 onPressed: () {
@@ -116,16 +154,34 @@ class _MainPage extends State<MainPage> {
               ),
             ),
             ListTile(
-              title: const Text('Local adapter address'),
+              title: const Text('Local adapter address',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  color: Colors.white,
+
+                ),),
               subtitle: Text(_address),
             ),
             ListTile(
-              title: const Text('Local adapter name'),
+              title: const Text('Local adapter name',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  color: Colors.white,
+
+                ),),
               subtitle: Text(_name),
               onLongPress: null,
             ),
             Divider(),
-            ListTile(title: const Text('Devices discovery and connection')),
+            ListTile(title: const Text('Devices discovery and connection',
+              style: TextStyle(
+                fontFamily: 'SourceSansPro',
+                fontSize: 20.0,
+                color: Colors.white,
+
+              ),)),
             ListTile(
               title: RaisedButton(
                 child: const Text('Connect to paired device to chat'),
