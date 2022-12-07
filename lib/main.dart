@@ -1,8 +1,9 @@
+
 import 'package:ihm/Page2.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_blue/flutter_blue.dart';
 import 'Page1.dart';
 import 'Page2.dart';
+import 'MainPage.dart';
 
 
 void main() => runApp(ihm());
@@ -20,6 +21,7 @@ class ihm extends StatelessWidget {
       routes: {
         '/': (context) => Page1(),
         '/vue': (context) => Page2(),
+        '/connectBlu': (context) => MainPage(),
       },
     );
   }

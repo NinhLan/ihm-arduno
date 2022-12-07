@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CarteReutilisable extends StatelessWidget {
-  final Color? couleur;
-  final Widget? cardChild;
-  final VoidCallback? onPress;
+  final Color couleur;
+  final Widget cardChild;
+  final VoidCallback onPress;
 
   CarteReutilisable({@required this.couleur, this.cardChild, this.onPress});
 

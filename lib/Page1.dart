@@ -2,12 +2,13 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 //import 'package:flutter_blue/flutter_blue.dart';
 
 //import 'Page2.dart';
 
 class Page1 extends StatefulWidget {
-  const Page1({Key? key}) : super(key: key);
+
 
   @override
   _Page1State createState() => _Page1State();
@@ -69,6 +70,25 @@ class _Page1State extends State<Page1> {
                 letterSpacing: 2.5,
                 fontWeight: FontWeight.bold,
               ),
+            ),
+            const SizedBox(
+              height: 70.0,
+            ),
+
+            FlatButton(
+
+                child: Text(
+                    'Setting Bluetooth',
+                  style: TextStyle(
+                    fontFamily: 'SourceSansPro',
+                    fontSize: 20.0,
+                  ),
+                ),
+              color: Colors.deepOrange.shade200.withOpacity(0.7),
+              textColor: Colors.orange.shade50,
+              onPressed: () {
+                Navigator.pushNamed(context, '/connectBlu');
+              },
             ),
             
              
